@@ -8,6 +8,7 @@ const decache = require('decache');
 const currentPath = process.cwd();
 
 const tailwindConfigPath = currentPath + '/tailwind/defaultConfig.js';
+const styleInputDir = currentPath + '/src/styles/';
 const styleInputPath = currentPath + '/src/styles/global.css';
 const styleOutputDir = currentPath + '/static/';
 
@@ -41,4 +42,9 @@ fs.watch(currentPath + '/tailwind.config.js', { recursive: true }, () => {
   decache(currentPath + '/tailwind.config.js');
   processTailwindCSS();
   console.log('tailwind config changed');
+});
+
+fs.watch(styleInputDir, { recursive: true }, () => {
+  processTailwindCSS();
+  console.log('stylesheet changed');
 });
