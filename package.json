@@ -14,6 +14,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "fiber-styles": "0.0.4",
+    "lodash": "^4.17.14",
     "log-timestamp": "^0.3.0",
     "polka": "^0.5.0",
     "sirv": "^0.4.0"
