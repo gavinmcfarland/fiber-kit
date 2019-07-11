@@ -7406,55 +7406,70 @@ video {
 }
 
 .font-heading {
-  font-family: Helvetica Arial test3;
+  font-family: Arial;
   line-height: 1.4;
-  letter-spacing: -0.3em;
   font-weight: 500;
 }
 
 .font-link {
-  font-family: Helvetica Arial sans-serif;
+  font-family: Arial;
   line-height: 1.4;
-  letter-spacing: -0.3em;
 }
 
 .font-legal {
-  font-family: Helvetica Arial sans-serif;
+  font-family: Arial;
   line-height: 1.4;
-  letter-spacing: -0.3em;
   font-size: 12px;
 }
 
 .font-quote {
-  font-family: Helvetica Arial sans-serif;
+  font-family: Arial;
   line-height: 1.4;
 }
 
 .font-caps {
-  font-family: Helvetica Arial sans-serif;
+  font-family: Arial;
   line-height: 1.4;
   letter-spacing: 0.23em;
   text-transform: Uppercase;
   font-weight: 600;
 }
 
-[class*="ct"] {
+.font-code {
+  line-height: 1.4;
+  font-size: 0.9em;
+}
+
+.ct-reverse {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+
+.ct {
+  --color: #000000;
+  --background-color: #FFFFFF;
+  --heading-color: #000000;
+  --link-color: #D92020;
   color: var(--color);
   background-color: var(--background-color);
 }
 
-.ct {
-  --color: #4a5568;
+.ct-light {
+  --color: #000000;
   --background-color: #FFFFFF;
-  --heading-color: red;
-  --link-color: pink;
+  --heading-color: #000000;
+  --link-color: #D92020;
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
-.ct-light {
-  --color: #4a5568;
-  --background-color: #FFFFFF;
-  --heading-color: red;
-  --link-color: pink;
+.ct-dark {
+  --color: #FFFFFF;
+  --background-color: #000000;
+  --heading-color: #FFFFFF;
+  --link-color: #D92020;
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
 .max-w-xs {
@@ -7510,6 +7525,122 @@ video {
 .max-w-full {
   --max-width: 100%;
   max-width: var(--max-width);
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  /* margin: 7sp 4sp; */
+  font-size: 1rem;
+  --color: #000000;
+  --background-color: #FFFFFF;
+  --heading-color: #000000;
+  --link-color: #D92020;
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+h1,h2,h3,h4,h5,h6,
+p,
+ul,
+ol,
+blockquote,
+:not(p)
+:not(li)
+>
+code {
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: Arial;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--heading-color);
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--heading-color);
+}
+
+h3 {
+  font-size: 2.25rem;
+  color: var(--heading-color);
+}
+
+h4 {
+  font-size: 1.875rem;
+  color: var(--heading-color);
+}
+
+h5 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+}
+
+h6 {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+}
+
+p,ul,ol,blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  cursor: pointer;
+  color: var(--link-color);
+}
+
+small {
+  font-family: Arial;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+caps {
+  font-family: Arial;
+  line-height: 1.4;
+  letter-spacing: 0.23em;
+  text-transform: Uppercase;
+  font-weight: 600;
+}
+
+blockquote,
+q {
+  font-family: Arial;
+  line-height: 1.4;
+}
+
+code {
+  line-height: 1.4;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: inherit;
+}
+
+p>code,li>code {
+  /* padding: 0.25sp 0.5sp; */
+  color: var(--background-color);
+  background-color: var(--color);
+}
+
+:not(p):not(li)>code {
+  /* padding: 2sp; */
+  display: block;
+  color: var(--background-color);
+  background-color: var(--color);
 }
 
 @media (min-width: 640px) {

@@ -7,6 +7,10 @@ module.exports = function({ addUtilities, theme }) {
     _.map(decl, (value, prop) => {
       props['--' + prop] = value;
     });
+
+    props.color = 'var(--color)';
+    props.backgroundColor = 'var(--background-color)';
+
     if (name == 'default') {
       return {
         [`.ct`]: props
@@ -19,9 +23,9 @@ module.exports = function({ addUtilities, theme }) {
   });
 
   const colorClass = {
-    [`[class*="ct"]`]: {
-      color: 'var(--color)',
-      backgroundColor: 'var(--background-color)'
+    [`.ct-reverse`]: {
+      color: 'var(--background-color)',
+      backgroundColor: 'var(--color)'
     }
   };
   addUtilities(colorClass);

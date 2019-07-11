@@ -1,0 +1,89 @@
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  /* margin: 7sp 4sp; */
+  @apply text-base ct;
+}
+
+:--heading,
+:--text-block,
+:--code-block {
+}
+
+:--heading {
+  @apply my-8;
+  @apply font-heading;
+}
+
+h1 {
+  @apply text-6xl;
+  color: var(--heading-color);
+}
+
+h2 {
+  @apply text-5xl;
+  color: var(--heading-color);
+}
+
+h3 {
+  @apply text-4xl;
+  color: var(--heading-color);
+}
+
+h4 {
+  @apply text-3xl;
+  color: var(--heading-color);
+}
+
+h5 {
+  @apply text-2xl;
+  color: var(--heading-color);
+}
+
+h6 {
+  @apply text-xl;
+  color: var(--heading-color);
+}
+
+:--text-block {
+  @apply my-6;
+}
+
+a {
+  cursor: pointer;
+  color: var(--link-color);
+}
+
+small {
+  @apply font-legal;
+}
+
+caps {
+  @apply font-caps;
+}
+
+blockquote,
+q {
+  @apply font-quote;
+}
+
+code {
+  @apply font-code;
+}
+
+pre {
+  background-color: inherit;
+}
+
+:--code-inline {
+  /* padding: 0.25sp 0.5sp; */
+  @apply ct-reverse;
+}
+
+:--code-block {
+  /* padding: 2sp; */
+  display: block;
+  @apply ct-reverse;
+}
