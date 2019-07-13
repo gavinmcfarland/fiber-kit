@@ -1,0 +1,11 @@
+```js exec
+import Section from '../components/Section.svelte';
+```
+
+# Here’s a chart
+
+The chart is rendered inside our MDsveX document.
+
+<Section>
+    # Hello
+</Section>

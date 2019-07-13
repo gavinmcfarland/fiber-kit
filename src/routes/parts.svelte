@@ -17,8 +17,6 @@
   <title>Sapper project template</title>
 </svelte:head>
 
-<template lang="phtml">
-
 <Section>
   <h1>Typography</h1>
   <h2>Sub Heading</h2>
@@ -47,27 +45,34 @@
   </p>
 </Section>
 
-<Section md>
-    <div class="w-1/3">
+<Section>
+  <div class="w-1/3">
+    <h2>Font Style</h2>
+  </div>
+  <div class="w-2/3">
+    <p>Create manageable font styles.</p>
 
-    ## Font Style
+    <ul>
+      <li>
+        <code>font-display</code>
+      </li>
+      <li>
+        <code>font-link</code>
+      </li>
+      <li>
+        <code>font-quote</code>
+      </li>
+      <li>
+        <code>font-code</code>
+      </li>
+      <li>
+        <code>font-caps</code>
+      </li>
+    </ul>
 
-    </div>
+    <code>code</code>
+  </div>
 
-    <div class="w-2/3">
-    
-    Create manageable font styles
-
-    - `font-display`
-    - `font-link`
-    - `font-code`
-    - `font-caps`
-
-    ```js
-    some code
-    ```
-
-    </div>
 </Section>
 
 <Section>
@@ -118,5 +123,3 @@
     <Dropdown>Dropdown</Dropdown>
     <Textfield>Textfield</Textfield>
   </Section> -->
-
-</template>

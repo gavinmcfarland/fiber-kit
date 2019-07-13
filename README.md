@@ -18,7 +18,7 @@ npm run build
 
 ## Watch styles
 
-Watch `styles/` and `tailwind.config.js` for changes by running the following command
+Watch `src/styles/` and `tailwind.config.js` for changes by running the following command
 
 ```bash
 npm run styles

@@ -6,6 +6,11 @@ import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import preprocess from 'svelte-preprocess';
+// import phtml from 'phtml';
+const phtmlMarkdown = require('@phtml/markdown');
+import { mdsvex } from 'mdsvex';
+import md from 'svelte-preprocess-md';
 
 require('./tailwind/index.js');
 
@@ -30,7 +35,21 @@ export default {
       svelte({
         dev,
         hydratable: true,
-        emitCss: true
+        emitCss: true,
+        extensions: ['.svelte', '.svexy', '.svx', '.md'], // here actually
+        preprocess: [
+          md(),
+          mdsvex(),
+          preprocess({
+          transformers: {
+            phtml({ content, filename }) {
+              return phtmlMarkdown
+                .process(content, { from: filename })
+                .then(result => ({ code: result.html, map: null }));
+            }
+          }
+          })
+        ]
       }),
       resolve({
         browser: true
@@ -39,7 +58,7 @@ export default {
 
       legacy &&
         babel({
-          extensions: ['.js', '.mjs', '.html', '.svelte'],
+          extensions: ['.js', '.mjs', '.html', '.svelte', '.md'],
           runtimeHelpers: true,
           exclude: ['node_modules/@babel/**'],
           presets: [
@@ -80,7 +99,21 @@ export default {
       }),
       svelte({
         generate: 'ssr',
-        dev
+        dev,
+        extensions: ['.svelte', '.svexy', '.svx', '.md'], // here actually
+        preprocess: [
+          md(),
+          mdsvex(),
+          preprocess({
+          transformers: {
+            phtml({ content, filename }) {
+              return phtmlMarkdown
+                .process(content, { from: filename })
+                .then(result => ({ code: result.html, map: null }));
+            }
+          }
+          })
+        ]
       }),
       resolve(),
       commonjs()

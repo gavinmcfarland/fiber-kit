@@ -1,10 +1,20 @@
+/* Reset */
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: unset;
+}
+
 html {
   /* font-size: 62.5%; */
 }
 
 body {
   /* margin: 7sp 4sp; */
-  @apply text-base ct;
+  @apply f-3 ct;
 }
 
 :--heading,
@@ -13,37 +23,37 @@ body {
 }
 
 :--heading {
-  @apply my-8;
+  @apply my-4;
   @apply font-heading;
 }
 
 h1 {
-  @apply text-6xl;
+  @apply f-8;
   color: var(--heading-color);
 }
 
 h2 {
-  @apply text-5xl;
+  @apply f-7;
   color: var(--heading-color);
 }
 
 h3 {
-  @apply text-4xl;
+  @apply f-6;
   color: var(--heading-color);
 }
 
 h4 {
-  @apply text-3xl;
+  @apply f-5;
   color: var(--heading-color);
 }
 
 h5 {
-  @apply text-2xl;
+  @apply f-4;
   color: var(--heading-color);
 }
 
 h6 {
-  @apply text-xl;
+  @apply f-3 font-bold;
   color: var(--heading-color);
 }
 
@@ -78,12 +88,25 @@ pre {
 }
 
 :--code-inline {
-  /* padding: 0.25sp 0.5sp; */
-  @apply ct-reverse;
+  @apply ct-contrast p-1 rounded-sm; 
 }
 
 :--code-block {
   /* padding: 2sp; */
   display: block;
-  @apply ct-reverse;
+  @apply ct-contrast p-4 rounded-sm;
 }
+
+table {
+  @apply my-6;
+  @apply border-t border-b border-gray-200;
+}
+
+td, th {
+  @apply py-1;
+}
+
+tr {
+  @apply border-t border-b border-gray-200;
+}
+

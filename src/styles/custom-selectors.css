@@ -1,4 +1,5 @@
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
-@custom-selector :--code-block :not(p):not(li) > code;
-@custom-selector :--code-inline p > code, li > code;
+@custom-selector :--code-block :not(p):not(li):not(td) > code;
+@custom-selector :--code-inline p > code, li > code, td > code;
 @custom-selector :--text-block p, ul, ol, blockquote;
+@custom-selector :--block blockquote, table, div, section;

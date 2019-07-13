@@ -42,15 +42,36 @@ module.exports = {
         color: '#000000',
         backgroundColor: '#FFFFFF',
         headingColor: '#000000',
-        linkColor: '#D92020'
+        linkColor: '#D92020',
+        codeColor: 'pink'
+      };
+      const contrast = {
+        color: '#000000',
+        backgroundColor: '#F0F0F0',
+        headingColor: '#000000',
+        linkColor: '#D92020',
+        codeColor: '#4F148F'
       };
       const dark = {
-        color: '#FFFFFF',
+        color: '#F0F0F0',
         backgroundColor: '#000000',
         headingColor: '#FFFFFF',
-        linkColor: '#D92020'
+        linkColor: '#D92020',
+        codeColor: 'pink'
       };
-      return { default: light, light, dark };
-    }
+      return { default: light, light, contrast, dark };
+    },
+    fontSize: {
+      '1': '0.75rem',
+      '2': '0.875rem',
+      '3': '1rem',
+      '4': '1.125rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '7': '1.875rem',
+      '8': '2.25rem',
+      '9': '3rem',
+      '10': '4rem',
+    },
   }
 };
