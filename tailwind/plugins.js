@@ -11,6 +11,7 @@ module.exports = {
     require('./plugins/fontStyle'),
     require('./plugins/colorTheme'),
     require('./plugins/maxWidth'),
-    require('./plugins/width')
+    require('./plugins/width'),
+    require('./plugins/padding')
   ]
 };

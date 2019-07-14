@@ -7360,6 +7360,20 @@ video {
   --w: unset;
 }
 
+.p {
+  padding-top: var(--pt, unset);
+  padding-right: var(--pr, unset);
+  padding-bottom: var(--pb, unset);
+  padding-left: var(--pl, unset);
+}
+
+.p > * {
+  --pt: unset;
+  --pr: unset;
+  --pb: unset;
+  --pl: unset;
+}
+
 /* Reset */
 
 table {
