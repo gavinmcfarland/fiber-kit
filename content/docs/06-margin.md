@@ -4,8 +4,8 @@ title: Margin
 
 Specify margin on an element.
 
-- `m<side>?-<integer:1-20>`
-- `m<side>?-<unit>`
+- `m<side>?-<integer:1-20>#{1,4}`
+- `m<side>?-<unit>#{1,4}`
 
 <!-- - `m[t|r|b|l|s|e]-<integer:1-20>`
 - `m[t|r|b|l|s|e]-<unit>`

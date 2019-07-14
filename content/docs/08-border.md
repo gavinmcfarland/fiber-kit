@@ -1,13 +1,11 @@
 ---
-title: Padding
+title: Border
 ---
 
-Specify padding on an element.
+Specifify a border on an element
 
-- `p<side>?-<integer:1-20>#{1,4}`
-- `p<side>?-<unit>#{1,4}`
+- `b<side>?-[<width>|<style>|<color>|<align>]#{1,3}`
 
-The padding property allows you to use negative values when you want to apply the same negative margin as padding. Useful when you need to conpensate for a parent that has padding or margins or to increase the hit area of a link.
 
 <!-- To specify different sides use any of the following formats
 

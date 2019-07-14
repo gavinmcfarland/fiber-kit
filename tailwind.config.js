@@ -43,21 +43,24 @@ module.exports = {
         backgroundColor: '#FFFFFF',
         headingColor: '#000000',
         linkColor: '#D92020',
-        codeColor: 'pink'
+        codeColor: 'pink',
+        borderColor: '#F0F0F0'
       };
       const contrast = {
         color: '#000000',
         backgroundColor: '#F0F0F0',
         headingColor: '#000000',
         linkColor: '#D92020',
-        codeColor: '#4F148F'
+        codeColor: '#4F148F',
+        borderColor: '#F0F0F0'
       };
       const dark = {
         color: '#F0F0F0',
         backgroundColor: '#000000',
         headingColor: '#FFFFFF',
         linkColor: '#D92020',
-        codeColor: 'pink'
+        codeColor: 'pink',
+        borderColor: '#F0F0F0'
       };
       return { default: light, light, contrast, dark };
     },
