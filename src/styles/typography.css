@@ -4,7 +4,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   padding: unset;
 }
 
@@ -18,7 +19,7 @@ html {
 
 body {
   /* margin: 7sp 4sp; */
-  @apply f-3 ct;
+  @apply f-3 color;
 }
 
 :--heading,
@@ -92,13 +93,13 @@ pre {
 }
 
 :--code-inline {
-  @apply ct-contrast p-1 rounded-sm; 
+  @apply color-contrast p-1 rounded-sm;
 }
 
 :--code-block {
   /* padding: 2sp; */
   display: block;
-  @apply ct-contrast p-4 rounded-sm;
+  @apply color-contrast p-4 rounded-sm;
 }
 
 table {
@@ -106,11 +107,11 @@ table {
   @apply border-t border-b border-gray-200;
 }
 
-td, th {
+td,
+th {
   @apply py-1;
 }
 
 tr {
   @apply border-t border-b border-gray-200;
 }
-

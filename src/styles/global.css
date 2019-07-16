@@ -1,5 +1,7 @@
+@import 'variables.css';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import 'custom-selectors.css';
 @import 'typography.css';
+@import 'staging.css';

@@ -13,17 +13,17 @@ module.exports = function({ addUtilities, theme }) {
 
     if (name == 'default') {
       return {
-        [`.ct`]: props
+        [`.color`]: props
       };
     } else {
       return {
-        [`.ct-${name}`]: props
+        [`.color-${name}`]: props
       };
     }
   });
 
   const colorClass = {
-    [`.ct-reverse`]: {
+    [`.color-reverse`]: {
       color: 'var(--background-color)',
       backgroundColor: 'var(--color)'
     }

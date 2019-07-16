@@ -7,9 +7,10 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import preprocess from 'svelte-preprocess';
-// import phtml from 'phtml';
+const phtml = require('phtml');
 const phtmlMarkdown = require('@phtml/markdown');
 const phtmlUtilityClass = require('phtml-utility-class');
+const phtmlCss = require('@phtml/css');
 import { mdsvex } from 'mdsvex';
 import md from 'svelte-preprocess-md';
 
@@ -21,15 +22,24 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 function utility() {
   return {
-      markup: ({ content, filename }) => {
-        // if (extname(filename) !== extension) return;
-        return phtmlUtilityClass
-                .process(content, { from: filename })
-                .then(result => ({ code: result.html, map: null }));
-      }
+    markup: ({ content, filename }) => {
+      // if (extname(filename) !== extension) return;
+      return new phtml([
+        phtmlCss({
+          plugins: [
+            require('postcss-preset-env')({
+              stage: 0
+            }),
+            require('postcss-custom-values')
+          ]
+        }),
+        phtmlUtilityClass()
+      ])
+        .process(content, { from: filename })
+        .then(result => ({ code: result.html, map: null }));
+    }
   };
 }
-
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
@@ -55,13 +65,13 @@ export default {
           md(),
           mdsvex(),
           preprocess({
-          transformers: {
-            phtml({ content, filename }) {
-              return phtmlMarkdown
-                .process(content, { from: filename })
-                .then(result => ({ code: result.html, map: null }));
+            transformers: {
+              phtml({ content, filename }) {
+                return phtmlMarkdown
+                  .process(content, { from: filename })
+                  .then(result => ({ code: result.html, map: null }));
+              }
             }
-          }
           })
         ]
       }),
@@ -119,13 +129,13 @@ export default {
           md(),
           mdsvex(),
           preprocess({
-          transformers: {
-            phtml({ content, filename }) {
-              return phtmlMarkdown
-                .process(content, { from: filename })
-                .then(result => ({ code: result.html, map: null }));
+            transformers: {
+              phtml({ content, filename }) {
+                return phtmlMarkdown
+                  .process(content, { from: filename })
+                  .then(result => ({ code: result.html, map: null }));
+              }
             }
-          }
           })
         ]
       }),

@@ -1,3 +1,29 @@
+:root {
+  --1: 10px;
+  --2: 20px;
+  --3: 30px;
+  --4: 40px;
+  --5: 50px;
+  --6: 60px;
+  --7: 70px;
+  --8: 80px;
+  --9: 90px;
+  --10: 100px;
+}
+
+.w {
+  --1: 10px;
+  --2: 20px;
+  --3: 30px;
+  --4: 40px;
+  --5: 50px;
+  --6: 60px;
+  --7: 70px;
+  --8: 500px;
+  --9: 600px;
+  --10: 800px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -7248,12 +7274,12 @@ video {
   font-size: 0.9em;
 }
 
-.ct-reverse {
+.color-reverse {
   color: var(--background-color);
   background-color: var(--color);
 }
 
-.ct {
+.color {
   --color: #000000;
   --background-color: #FFFFFF;
   --heading-color: #000000;
@@ -7264,7 +7290,7 @@ video {
   background-color: var(--background-color);
 }
 
-.ct-light {
+.color-light {
   --color: #000000;
   --background-color: #FFFFFF;
   --heading-color: #000000;
@@ -7275,7 +7301,7 @@ video {
   background-color: var(--background-color);
 }
 
-.ct-contrast {
+.color-contrast {
   --color: #000000;
   --background-color: #F0F0F0;
   --heading-color: #000000;
@@ -7286,7 +7312,7 @@ video {
   background-color: var(--background-color);
 }
 
-.ct-dark {
+.color-dark {
   --color: #F0F0F0;
   --background-color: #000000;
   --heading-color: #FFFFFF;
@@ -7380,7 +7406,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   padding: unset;
 }
 
@@ -7531,7 +7558,8 @@ table {
   border-color: #edf2f7;
 }
 
-td, th {
+td,
+th {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
