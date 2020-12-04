@@ -19,7 +19,7 @@
     "compression": "^1.7.1",
     "fiber-styles": "0.0.4",
     "golden-fleece": "^1.0.9",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.4.1",
     "lodash": "^4.17.14",
     "log-timestamp": "^0.3.0",
     "mdsvex": "^0.3.0",
